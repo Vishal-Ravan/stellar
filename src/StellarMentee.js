@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { CardContent, Grid, Typography, TextField, MenuItem } from '@material-ui/core'
 import Button from '@material-ui/core/Button';
@@ -12,13 +11,11 @@ import MenteeAccordion from 'MenteeAccordion';
 import Menu from '@material-ui/core/Menu';
 import MenteeRadio from 'MenteeRadio';
 import { useTranslation } from 'react-i18next';
-
+import addcalendar from '../../assets/img/addcalendar.png';
+import CEME from '../../assets/img/CEME.png';
 import PhoneInputGfg from 'PhoneInputGfg'
-
 import { Checkbox } from '@material-ui/core';
 import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined';
-
-
 
 const useStyles = makeStyles((theme) => ({
     stellarMain: {
@@ -36,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
             width: '100%',
             padding: '0',
         },
-
     },
     materialButton: {
         boxShadow: "none",
@@ -59,7 +55,6 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: "Sen",
         color: "#303186",
         fontWeight: "bold",
-
         textAlign: "left"
     },
     paraP: {
@@ -67,10 +62,8 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: "Montserrat",
         color: "#1c1c1c",
         fontWeight: "500",
-
         textAlign: "left",
     },
-
     paraPSpan: {
         fontWeight: "bold"
     },
@@ -152,7 +145,6 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "18px",
         fontFamily: "sen !important",
     },
-
     formInputText: {
         '& input': {
             height: "0.5rem !important",
@@ -166,14 +158,11 @@ const useStyles = makeStyles((theme) => ({
             fontFamily: "Montserrat",
             fontStyle: 'italic',
             [theme.breakpoints.down('1025')]: {
-
                 width: '100%',
             },
             [theme.breakpoints.down('688')]: {
-
                 width: '100%',
             },
-
         },
     },
     formInputText1: {
@@ -189,14 +178,11 @@ const useStyles = makeStyles((theme) => ({
             fontFamily: "Montserrat",
             fontStyle: 'italic',
             [theme.breakpoints.down('1025')]: {
-
                 width: '100%',
             },
             [theme.breakpoints.down('688')]: {
-
                 width: '100%',
             },
-
         },
     },
     formInputText2: {
@@ -212,14 +198,11 @@ const useStyles = makeStyles((theme) => ({
             fontFamily: "Montserrat",
             fontStyle: 'italic',
             [theme.breakpoints.down('1025')]: {
-
                 width: '100%',
             },
             [theme.breakpoints.down('688')]: {
-
                 width: '100%',
             },
-
         },
     },
     formInputText3: {
@@ -236,14 +219,11 @@ const useStyles = makeStyles((theme) => ({
             fontStyle: 'italic',
             textTransform: 'italic',
             [theme.breakpoints.down('1025')]: {
-
                 width: '100%',
             },
             [theme.breakpoints.down('688')]: {
-
                 width: '100%',
             },
-
         },
     },
     formInputText4: {
@@ -259,14 +239,11 @@ const useStyles = makeStyles((theme) => ({
             fontFamily: "Montserrat",
             fontStyle: 'italic',
             [theme.breakpoints.down('1025')]: {
-
                 width: '100%',
             },
             [theme.breakpoints.down('688')]: {
-
                 width: '100%',
             },
-
         },
     },
     formInputText5: {
@@ -282,11 +259,9 @@ const useStyles = makeStyles((theme) => ({
             fontFamily: "Montserrat",
             fontStyle: 'italic',
             [theme.breakpoints.down('1025')]: {
-
                 width: '100%',
             },
             [theme.breakpoints.down('688')]: {
-
                 width: '100%',
             },
 
@@ -324,7 +299,6 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: '0.7rem !important',
         paddingTop: '1.3rem !important',
         paddingBottom: '0.5rem !important',
-
     },
     recaptcha: {
         display: 'flex',
@@ -344,13 +318,11 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: '0.9rem !important',
         paddingBottom: '0.7rem',
         fontFamily: 'sen !important'
-
     },
     captchaParaSpan: {
         color: '#3c3494',
         fontStyle: 'italic'
     },
-
     finalFirstBtn: {
         fontSize: '15px !important',
         width: '64% !important',
@@ -362,7 +334,6 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '0px !important',
         background: 'linear-gradient(90deg, #a14a9d 0%, #753f99 35%, #463795 100%)',
         padding: '0 !important',
-
         fontWeight: '0 !important',
     },
     finalSecondBtn: {
@@ -376,7 +347,6 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '0px !important',
         backgroundColor: '#a44a9d',
         padding: '0 !important',
-
         fontWeight: '0 !important',
     },
     paraLastRight: {
@@ -399,16 +369,12 @@ const useStyles = makeStyles((theme) => ({
     tableData1: {
         color: '#3d3795',
         fontWeight: '600',
-
     },
     tableData2: {
         color: '#3d3795',
         fontWeight: '700',
-
         '& span': {
-
             borderBottom: '3px solid #3d3795',
-
             padding: '0 0.8rem'
         }
     },
@@ -420,9 +386,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justyfyContent: 'center',
         textAlign: 'center',
-
         height: 'auto',
-
     },
     tabletime2: {
         width: '3.7rem',
@@ -430,8 +394,6 @@ const useStyles = makeStyles((theme) => ({
     },
     tabletime3: {
         width: '3.7rem',
-
-
     },
     imgggClen: {
         width: '20px',
@@ -443,8 +405,6 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '12px',
         fontWeight: 'bold',
     },
-
-
     drop1: {
         background: 'white',
         height: '2.8rem',
@@ -454,20 +414,16 @@ const useStyles = makeStyles((theme) => ({
         fontStyle: 'italic',
         fontSize: '16px',
         borderBottom: '1px solid #e2e2e2',
-
     },
     iconn: {
         color: '#a7a5a5',
         fontWeight: '600',
-
         height: '2rem',
         width: '2rem'
-
     },
     cLeder: {
         color: '#a7a5a5',
         fontWeight: '600',
-
     },
     eventprotext: {
         marginTop: '0rem',
@@ -484,30 +440,20 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-
-
 const StellarMentee = () => {
     const { t } = useTranslation()
-
-
-
     const classes = useStyles();
     return (
         <>
-
-
             <div className={classes.stellarMain}>
-
                 <div className={classes.stellarLeftSide}>
-
                     <Grid container md={12}>
                         <Button className={classes.materialButton} startIcon={<ArrowBackIosOutlinedIcon />}>Return to all upcoming programs</Button>
                     </Grid>
                     <Grid container md={12}>
                         <div className={classes.forpaddingLeft}>
-
                             <Typography>
-                                <img src=" https://itdevelopmentservices.com/fortunadata/wp-content/uploads/2022/06/logo.png" width='200px' height='123px' />
+                                <img src={CEME} width='200px' height='123px' />
                                 <h4 className={classes.Headingh4}>{t('common:AcmeMentorProgram', " ACME_MENTOR MENOTORING PROGRAM")}</h4>
                                 <p className={classes.paraP}>{t('common:Location', "   Location")}: <span className={classes.paraPSpan}>{t('common:online', "   online")}</span></p>
                             </Typography>
@@ -528,7 +474,7 @@ const StellarMentee = () => {
                                         </div>
                                     </Grid>
                                     <p className={classes.calender} >{t('common:calendar', "   Add to many calendar")}
-                                        <img src="https://www.data-storage.uk/wp-content/uploads/2022/06/addcalendar.png" className={classes.imgggClen} /></p>
+                                        <img src={addcalendar} className={classes.imgggClen} /></p>
                                 </div>
                             </Typography>
                             <Typography
@@ -537,13 +483,10 @@ const StellarMentee = () => {
                             </Typography>
                         </div>
                     </Grid>
-
                 </div>
-
                 <div className={classes.stellarRightSide}>
                     <Grid md={12}>
                         <Typography>
-
                             <h4 className={classes.rightStellarh4}>{t('common:Welcome', "Welcome to the Registration as Mentee")}</h4>
                             <p className={classes.rightStellarPargraph}>{t('common:RegistrationParagraph', "   Now,you will fillin the application form to proceed with your final enrollment step. It might take you 5 minutes to complete it. The quality of your entry will determine the match with  a potential mentor.")}</p>
                         </Typography>
@@ -551,12 +494,10 @@ const StellarMentee = () => {
                     <div className={classes.formStartBg}>
                         <Typography >
                             <div className={classes.headingRight}>
-
                                 <div className={classes.headingInRight}>{t('common:Number', "   1")}</div>
                                 <div className={classes.headingInRightPara}>{t('common:Personal', "   Personal Details")}</div>
                             </div>
                         </Typography>
-
                         <div className={classes.forPadingForRight}>
                             <CardContent className={classes.cardContent}>
                                 <form>
@@ -573,22 +514,16 @@ const StellarMentee = () => {
                                             <InputLabel className={classes.labelFilled}>{t('common:Email', "   Email *")}</InputLabel>
                                             <TextField className={classes.formInputText1} type='email' placeholder={t('common:Jhondoe', "   Jhondoe@email.com")} variant='filled' fullWidth required />
                                         </Grid>
-
-
                                         <Grid item md={12} sm={12} xs={12}>
                                             <InputLabel
                                                 className={classes.labelFilled}>{t('common:Phone', "  Phone ")} *</InputLabel>
-
                                             <PhoneInputGfg />
                                         </Grid>
-
                                         <RadioButtons />
                                     </Grid>
                                 </form>
-
                             </CardContent>
                         </div>
-
                         <Grid >
                             <div className={classes.headingRight}>
 
@@ -606,7 +541,6 @@ const StellarMentee = () => {
                                                     multiline
                                                 />
                                             </Grid>
-
                                         </Grid>
                                         <Grid item md={12} sm={12} xs={12}>
                                             <InputLabel className={classes.labelFilledLinked} >{t('common:LinkedIn', "   LinkedIn Profile")}* </InputLabel>
@@ -614,26 +548,18 @@ const StellarMentee = () => {
                                         </Grid>
                                     </Grid>
                                 </CardContent>
-
-
                                 <CardContent>
                                     <Grid container spacing={1}>
                                         <Grid item md={12} sm={12} xs={12}>
-
                                             <MenteeAccordion />
-
                                             <MenteeRadio />
-
-
                                         </Grid>
                                     </Grid>
                                 </CardContent>
                             </div>
                         </Grid>
-
                         <Grid>
                             <div className={classes.headingRight}>
-
                                 <div className={classes.headingInRight}>{t('common:number', "   3")}</div>
                                 <div className={classes.headingInRightPara}>{t('common:Company', "   Company Details")}</div>
                             </div>
@@ -659,8 +585,6 @@ const StellarMentee = () => {
                                                 <InputLabel className={classes.labelFilledstate}>{t('common:Postal', "   Postal Code")}</InputLabel>
                                                 <TextField className={classes.formInputText} placeholder='------' type='number' variant='filled' fullWidth required />
                                             </Grid>
-
-
                                             <Grid item md={6} sm={12} xs={12}>
                                                 <InputLabel className={classes.labelFilledstate}>{t('common:Country', "   Country")}</InputLabel>
                                                 <div className={classes.AddUpperDepartmentDiv}>
@@ -704,7 +628,6 @@ const StellarMentee = () => {
                                         </Grid>
                                     </form>
                                 </CardContent>
-
                                 <br />
                                 <hr />
                             </div>
@@ -712,26 +635,19 @@ const StellarMentee = () => {
                         <div className={classes.forPadingFormRight}>
                             <div className={classes.recaptcha}>
                                 <Checkbox />
-
                                 <p> I am not a Robot</p>
-
                             </div>
                             <p className={classes.captchaPara}><i>{t('common:By', "   By clicking Accept and register, you agree to the ")}<span className={classes.captchaParaSpan}>{t('common:Terms', "   Terms of Use")}</span>,{t('common:the ', "   the ")} <span className={classes.captchaParaSpan}>{t('common:Privacy', "   Privacy Policy")}</span>{t('common:and', "   and")}  <span className={classes.captchaParaSpan}>{t('common:cookies', "   cookies Policy")}</span>{t('common:ofStellar', "   of Stellar Mentoring ")} </i></p>
                         </div>
                         <div className={classes.finalButtons}>
-                            <Button className={classes.finalFirstBtn}><p className={classes.finalFirstBtn1}>{t('common:SaveButton', "   Save and returns to all upcoming programs")}</p></Button>
+                            <Button className={classes.finalFirstBtn}><p className={classes.finalFirstBtn1}>{t('common:SaveButton', "   Save and return to all upcoming programs")}</p></Button>
                             <Button className={classes.finalSecondBtn}><p className={classes.finalFirstBtn1}>{t('common:AcceptButton', "   Accept and Register")} </p><ArrowForwardIosOutlinedIcon /></Button>
                         </div>
-
                     </div>
                     <p className={classes.paraLastRight}>*{t('common:Neccessary', "   Neccessary Field")} </p>
                 </div>
             </div>
-
-
-
         </>
     )
 }
-
 export default StellarMentee;

@@ -3,7 +3,7 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-
+import { useTranslation } from 'react-i18next';
 import { InputLabel } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
@@ -39,19 +39,18 @@ const useStyles = makeStyles(() => ({
 }))
 export default function RadioButtonsGroup() {
   const [value, setValue] = React.useState('female');
-
+  const { t } = useTranslation()
   const handleChange = (event) => {
     setValue(event.target.value);
   };
   const classes = useStyles();
   return (
     <FormControl component="fieldset" className={classes.radioGroup}>
-
       <RadioGroup value={value} onChange={handleChange}>
-        <InputLabel className={classes.formMentorInputLabel}>Have you alredy mentored people *</InputLabel>
+        <InputLabel className={classes.formMentorInputLabel}>{t('common:alreadymentoredpeople', '  Have you already mentored people? ')} *</InputLabel>
         <div className={classes.butnRadioGroup}>
-          <FormControlLabel className={classes.butnRadioGroup2} value="female" control={<Radio />} label="Yes" />
-          <FormControlLabel className={classes.butnRadioGroup2} value="male" control={<Radio />} label="No" />
+          <FormControlLabel className={classes.butnRadioGroup2} value="female" control={<Radio />} label={t('common:Yes', ' Yes ')} />
+          <FormControlLabel className={classes.butnRadioGroup2} value="male" control={<Radio />} label={t('common:No', ' No ')} />
         </div>
       </RadioGroup>
     </FormControl>

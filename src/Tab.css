@@ -1,0 +1,77 @@
+.react-tabs {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab-list {
+    border-bottom: 1px solid #aaa;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.react-tabs__tab {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-bottom: none;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+    color: #3c3494;
+    font-weight: bold
+}
+
+.react-tabs__tab--disabled {
+    color: GrayText;
+    cursor: default;
+}
+
+.react-tabs__tab:focus {
+    color: #3c3494;
+    outline: none;
+}
+
+.react-tabs__tab:focus:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    left: -4px;
+    right: -4px;
+    bottom: -5px;
+    color: red;
+}
+
+.react-tabs__tab-panel {
+    display: none;
+}
+
+.react-tabs__tab-panel--selected {
+    display: block;
+}
+
+.mt--10 {
+    margin-top: 10px;
+}
+
+/*MileStone*/
+@media screen and (max-width:666px) {
+    .MuiGrid-root.makeStyles-vishal-164.MuiGrid-item .MuiPaper-root.MuiStepper-root.MuiStepper-horizontal.MuiPaper-elevation0 {
+        /*background-color:  green !important;*/
+        /*display: block !important;*/
+        padding: 8px 0 !important;
+        margin-top: 2px;
+    }
+
+    .MuiButtonBase-root.MuiStepButton-root.MuiStepButton-horizontal {
+        justify-content: flex-start !important;
+        padding: 35px 20px;
+        box-sizing: border-box;
+    }
+
+    .MuiGrid-root.makeStyles-vishal-164 .makeStyles-root-215 {
+        width: 100% !important;
+    }
+}

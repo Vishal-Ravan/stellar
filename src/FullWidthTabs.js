@@ -8,15 +8,12 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import React from 'react'
 import { useTranslation } from 'react-i18next';
-
 import Button from '@material-ui/core/Button';
 import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined';
 import { Grid } from '@material-ui/core';
 
-
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -46,10 +43,8 @@ function a11yProps(index) {
 }
 const useStyles = makeStyles((theme) => ({
   root: {
-
     width: "100%",
     height: "auto",
-
   },
   bar: {
     background: "hsl(0deg 0% 91%) ",
@@ -65,29 +60,18 @@ const useStyles = makeStyles((theme) => ({
     margin: '0',
     [theme.breakpoints.down('576')]: {
       textAlign: 'center',
-
       fontSize: '14px'
-
     },
   },
-
   acmeFirstLayout: {
     display: 'flex',
     [theme.breakpoints.down('576')]: {
       display: 'inherit',
-
-
     },
-
   },
   tableTime: {
     display: 'flex'
   },
-
-
-
-
-
   acmeStart: {
     paddingLeft: "1rem",
     width: "100%",
@@ -95,7 +79,6 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'left',
       marginTop: '1rem',
       width: '100%',
-
     }
   },
   acmeHeading: {
@@ -106,12 +89,10 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
     margin: '0px !important',
     padding: '0px !important'
-
   },
   acmeParaSpan: {
     fontSize: "15px",
     fontFamily: "Montserrat",
-
     marginTop: '0.7rem !important',
     marginBottom: '0.7rem',
     padding: '0px !important'
@@ -133,13 +114,10 @@ const useStyles = makeStyles((theme) => ({
     padding: '0px !important',
     textAlign: "left",
     width: '100%',
-
     '& a': {
       textDecoration: 'none',
     },
   },
-
-
   tableHead: {
     background: '#3d3795',
     color: 'white',
@@ -147,19 +125,14 @@ const useStyles = makeStyles((theme) => ({
   tableData1: {
     color: '#3d3795',
     fontWeight: '600',
-
   },
   tableData2: {
     color: '#3d3795',
     fontWeight: '700',
-
     '& span': {
-
       borderBottom: '3px solid #3d3795',
-
       padding: '0 0.8rem'
     }
-
   },
   tableData3: {
     color: '#3d3795',
@@ -169,43 +142,33 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justyfyContent: 'center',
     textAlign: 'center',
-
     height: '6.3rem',
-
   },
   tabletime2: {
     width: '3.7rem',
     borderRight: '1px solid #3d3795',
     [theme.breakpoints.down('576')]: {
-
       width: '100%',
     }
   },
   tabletime3: {
     width: '3.7rem',
     [theme.breakpoints.down('576')]: {
-
       width: '100%',
     }
-
   },
   pbtn: {
     color: "#303186 ",
     margin: '0',
     padding: '0',
     alignItems: 'center',
-
     width: '100%',
     fontFamily: "Montserrat !important",
     justyfyContent: 'center',
-
     textAlign: 'center',
   },
-
-
   btnDescript1: {
     backgroundColor: '#e8e8e8 !important',
-
     borderColor: "transparent",
     alignItems: "center  !important ",
     color: "#303186 !important",
@@ -228,14 +191,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('576')]: {
       marginLeft: '1%',
     },
-
     [theme.breakpoints.down('1024')]: {
       margin: '0',
       width: '75%',
-
     },
-
-
   },
   ArrowIcon: {
     width: '11% !important',
@@ -247,12 +206,9 @@ const useStyles = makeStyles((theme) => ({
 
       marginLeft: '9%',
     },
-
   },
   btnDescript: {
-
     backgroundColor: '#e8e8e8 !important',
-
     borderColor: "transparent",
     alignItems: "center  !important ",
     color: "#303186 !important",
@@ -271,16 +227,13 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1rem",
     [theme.breakpoints.down('1278')]: {
       fontSize: '12px',
-
     },
     [theme.breakpoints.down('576')]: {
       marginRight: '1%',
     },
-
     [theme.breakpoints.down('1024')]: {
       marginRight: '1%',
       width: '75%',
-
     },
   },
   btnDescription: {
@@ -288,15 +241,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('576')]: {
       display: 'inherit',
     },
-
     [theme.breakpoints.down('1024')]: {
       display: 'inherit',
-
-
     },
   },
-
-
 }));
 
 export default function FullWidthTabs() {
@@ -304,25 +252,21 @@ export default function FullWidthTabs() {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
   const handleChangeIndex = (index) => {
     setValue(index);
   };
 
   return (
     <>
-
       <Grid md={12} sm={12} xs={12} className={classes.root}>
         <AppBar position="static" color="default" className={classes.bar}>
           <Tabs md={12} sm={12} xs={12} className={classes.tab}
             value={value}
             onChange={handleChange}
             indicatorColor="primary"
-
             variant="fullWidth"
             aria-label="full width tabs example"
           >
@@ -359,16 +303,10 @@ export default function FullWidthTabs() {
                     <p className={classes.acmeParaSpan}>{t('common:Location', "   Location")}: <span className={classes.ospan}>{t('common:online', "   online")}</span></p>
                     <p className={classes.acmeParagraph}>{t('common:TabParagraph', "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nesciunt voluptatibus odit  eius itaque placeat. Doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veritatis numquam laudantium similique.")} <br /> <a href="http://f">{t('common:MoreDetais', "Read more detail")}</a></p>
                   </Typography>
-
-
-
                   <Grid className={classes.btnDescription}>
                     <Button className={classes.btnDescript}>{<ArrowForwardIosOutlinedIcon className={classes.ArrowIcon} />}<p className={classes.pbtn}> {t('common:MentorButton', "Mentor Registration")} </p></Button>
                     <Button className={classes.btnDescript1} >  {<ArrowForwardIosOutlinedIcon className={classes.ArrowIcon} />}<p className={classes.pbtn}> {t('common:MenteeButton', "Mentee Registration")}  </p></Button>
-
-
                   </Grid>
-
                 </Grid>
               </Grid>
             </Grid>
@@ -396,16 +334,10 @@ export default function FullWidthTabs() {
                     <p className={classes.acmeParaSpan}>{t('common:Location', "   Location")}: <span className={classes.ospan}>{t('common:online', "   online")}</span></p>
                     <p className={classes.acmeParagraph}>{t('common:TabParagraph', "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nesciunt voluptatibus odit  eius itaque placeat. Doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veritatis numquam laudantium similique.")} <br /> <a href="http://f">{t('common:MoreDetais', "Read more detail")}</a></p>
                   </Typography>
-
-
-
                   <Grid className={classes.btnDescription}>
                     <Button className={classes.btnDescript}>{<ArrowForwardIosOutlinedIcon className={classes.ArrowIcon} />}<p className={classes.pbtn}> {t('common:MentorButton', "Mentor Registration")} </p></Button>
                     <Button className={classes.btnDescript1} >  {<ArrowForwardIosOutlinedIcon className={classes.ArrowIcon} />}<p className={classes.pbtn}> {t('common:MenteeButton', "Mentee Registration")}  </p></Button>
-
-
                   </Grid>
-
                 </Grid>
               </Grid>
             </Grid>
@@ -433,16 +365,10 @@ export default function FullWidthTabs() {
                     <p className={classes.acmeParaSpan}>{t('common:Location', "   Location")}: <span className={classes.ospan}>{t('common:online', "   online")}</span></p>
                     <p className={classes.acmeParagraph}>{t('common:TabParagraph', "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nesciunt voluptatibus odit  eius itaque placeat. Doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veritatis numquam laudantium similique.")} <br /> <a href="http://f">{t('common:MoreDetais', "Read more detail")}</a></p>
                   </Typography>
-
-
-
                   <Grid className={classes.btnDescription}>
                     <Button className={classes.btnDescript}>{<ArrowForwardIosOutlinedIcon className={classes.ArrowIcon} />}<p className={classes.pbtn}> {t('common:MentorButton', "Mentor Registration")} </p></Button>
                     <Button className={classes.btnDescript1} >  {<ArrowForwardIosOutlinedIcon className={classes.ArrowIcon} />}<p className={classes.pbtn}> {t('common:MenteeButton', "Mentee Registration")}  </p></Button>
-
-
                   </Grid>
-
                 </Grid>
               </Grid>
             </Grid>
@@ -470,16 +396,10 @@ export default function FullWidthTabs() {
                     <p className={classes.acmeParaSpan}>{t('common:Location', "   Location")}: <span className={classes.ospan}>{t('common:online', "   online")}</span></p>
                     <p className={classes.acmeParagraph}>{t('common:TabParagraph', "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nesciunt voluptatibus odit  eius itaque placeat. Doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veritatis numquam laudantium similique.")} <br /> <a href="http://f">{t('common:MoreDetais', "Read more detail")}</a></p>
                   </Typography>
-
-
-
                   <Grid className={classes.btnDescription}>
                     <Button className={classes.btnDescript}>{<ArrowForwardIosOutlinedIcon className={classes.ArrowIcon} />}<p className={classes.pbtn}> {t('common:MentorButton', "Mentor Registration")} </p></Button>
                     <Button className={classes.btnDescript1} >  {<ArrowForwardIosOutlinedIcon className={classes.ArrowIcon} />}<p className={classes.pbtn}> {t('common:MenteeButton', "Mentee Registration")}  </p></Button>
-
-
                   </Grid>
-
                 </Grid>
               </Grid>
             </Grid>
@@ -510,9 +430,6 @@ export default function FullWidthTabs() {
                   <div className={classes.root}>
                     <Grid md={12}
                       display='flex'>
-
-
-
                     </Grid>
                   </div>
                 </div>
@@ -545,8 +462,6 @@ export default function FullWidthTabs() {
                   <div className={classes.root}>
                     <Grid md={12}
                       display='flex'>
-
-
                     </Grid>
                   </div>
                 </div>

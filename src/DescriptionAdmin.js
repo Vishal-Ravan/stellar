@@ -1,10 +1,8 @@
-import { Button, Grid, Typography } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
-import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined';
+import u from './assets/img/u.jpeg';
 import { useTranslation } from 'react-i18next';
-import { Link } from "react-router-dom";
-import CEME from './assets/img/CEME.png';
 
 const useStyles = makeStyles((theme) => ({
     fullDiv: {
@@ -92,9 +90,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: '#3c3494',
         padding: '0px 1rem !important',
         '& span': {
-
             borderBottom: '2px solid #e6e6e7',
-
             padding: '0 0.6rem'
         },
     },
@@ -189,13 +185,11 @@ const DescriptionPage = () => {
             <Grid className={classes.tableDescription} md={12}>
                 <Grid className={classes.tableTime1}>
                     <div className={classes.tabletime2}>
-
                         <Grid className={classes.tableData1} md={12}>{t('common:month', " jan")}</Grid>
                         <Grid className={classes.tableData2} md={12}><span> 01</span></Grid>
                         <Grid className={classes.tableData3} md={12}>2020</Grid>
                     </div>
                     <div className={classes.tabletime3}>
-
                         <Grid className={classes.tableData1} md={12}>{t('common:month', " feb")}</Grid>
                         <Grid className={classes.tableData2} md={12}><span> 18</span></Grid>
                         <Grid className={classes.tableData3} md={12}>2020</Grid>
@@ -204,15 +198,13 @@ const DescriptionPage = () => {
             </Grid>
             <div className={classes.descriptinMainDiv}>
                 <Grid className={classes.descriptionEvent} md={12}>
-                    <img src={CEME} alt="" width='60%' height="190vh" />
+                    <img src={u} alt="" width='60%' height="190vh" />
                 </Grid>
             </div>
             <div className={classes.information}>
                 <Typography className={classes.descPara}>
                     <p className={classes.descPara1}>{t('common:Leadershipprogram', " You are enrolling to cohart 1 Leadership program")}</p>
-
                     <p className={classes.descPara2}>{t('common:mentoringSession', "   The mentor in journy consist of 6 months of mentoring session:")}</p>
-
                     <ol className={classes.ol}>
                         <li className={classes.oll}>
                             {t('common:6umins', "   In overage 6 one-on-one Mentoring Session 3U TO 6umins each")}
@@ -225,14 +217,10 @@ const DescriptionPage = () => {
                     <p className={classes.descPara4}>{t('common:ownership', "   Our Mentor will support you,at the condition that you are motivated and engaged in your own develoment plan. By registering, we expected you to understand this and take ownership.")} </p>
                     <p className={classes.descPara5}>{t('common:expection', "   you will be matched to a potential Mentor and Mentee who is as close as possible to yor expection and needs.")}</p>
                 </Typography>
-                <Grid className={classes.btnDescription}>
-                    <Button className={classes.btnDescript} component={Link} to="/user/programs/all/StellarUpcoming/DescriptionPage/StellarMentee"><p className={classes.pbtn}>{<ArrowForwardIosOutlinedIcon />}{t('common:RegisterasMentee', "   Register as Mentee")}</p></Button>
-                    <Button className={classes.btnDescript1} component={Link} to="/user/programs/all/StellarUpcoming/DescriptionPage/StellarMentor"><p className={classes.pbtn}> {<ArrowForwardIosOutlinedIcon />} {t('common:Registerasmentor', "   Register as mentor")} </p></Button>
-                </Grid>
+                <br />
             </div>
         </div>
     </>
     )
 }
-
 export default DescriptionPage

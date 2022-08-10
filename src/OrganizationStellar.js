@@ -1,9 +1,8 @@
-
 import { Typography, Grid, InputLabel } from '@material-ui/core'
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { useTranslation } from 'react-i18next';
 import StarOutlinedIcon from '@material-ui/icons/StarOutlined';
-
 
 const useStyles = makeStyles((theme) => ({
     headOrganization: {
@@ -31,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
         textTransform: 'uppercase',
         textAlign: 'left',
-
     },
     organizationP: {
         fontSize: ' 18px',
@@ -50,12 +48,8 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Montserrat',
         [theme.breakpoints.down('1076')]: {
             width: '100%',
-
         }
     },
-
-
-
     headTop1: {
         width: '40%',
         marginLeft: '0rem',
@@ -64,7 +58,6 @@ const useStyles = makeStyles((theme) => ({
             width: '100%',
             marginLeft: '0rem',
         }
-
     },
     tableTime: {
         border: '2px solid #3d3795',
@@ -79,7 +72,6 @@ const useStyles = makeStyles((theme) => ({
             width: '100%',
             padding: '0',
             marginTop: '2rem',
-
         }
     },
     gridOrg2: {
@@ -89,7 +81,6 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         margin: '0',
         width: '100% !important',
-
     },
     gridOrg3: {
         borderRight: '2px solid #b99ac2',
@@ -99,15 +90,12 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('1076')]: {
             display: 'none',
         }
-
     },
     gridOrg4: {
         background: '#d1d0dd',
         [theme.breakpoints.down('1076')]: {
             display: 'none',
         }
-
-
     },
     gridOrg5: {
         background: '#d1d0dd',
@@ -117,7 +105,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('1076')]: {
             display: 'none',
         }
-
     },
     gridOrg6: {
         background: '#d1d0dd',
@@ -125,8 +112,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('1076')]: {
             display: 'none',
         }
-
-
     },
     flexIcon: {
         width: '61%',
@@ -147,12 +132,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('1076')]: {
             display: 'none',
         }
-
     },
-
-
-
-
     // flag
 
     flag1: {
@@ -163,8 +143,6 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '0.2rem',
         padding: '0',
     },
-
-
     flag: {
         marginTop: '0.2rem',
         padding: '0',
@@ -172,7 +150,6 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '0.2rem',
         height: '1.4rem'
     },
-
     spanP: {
         fontWeight: '900',
         fontFamily: 'Montserrat',
@@ -195,13 +172,11 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         textAlign: 'left',
         marginTop: '0',
-
         fontFamily: 'Montserrat',
     },
     description: {
         fontWeight: "900",
         fontFamily: 'Montserrat',
-
     },
     starOrg: {
         color: "#3d3795"
@@ -215,22 +190,18 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('1076')]: {
             marginLeft: '0',
         }
-
     },
     paragraphOrg2: {
         fontSize: ' 16px',
         color: '#1c1c1c',
         marginLeft: '1rem',
         textAlign: 'left',
-
         margin: '0',
         fontFamily: 'Montserrat',
         [theme.breakpoints.down('1076')]: {
             marginLeft: '0',
         }
-
     },
-
     paragraphOrg3: {
         fontSize: ' 16px',
         color: '#303186',
@@ -242,7 +213,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('1076')]: {
             marginLeft: '0',
         }
-
     },
     paragraphOrg: {
         fontSize: ' 16px',
@@ -251,14 +221,10 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '1rem',
         marginTop: '55px',
         marginBottom: '0',
-
-
         fontFamily: 'Montserrat',
         [theme.breakpoints.down('1076')]: {
             marginLeft: '0',
         }
-
-
     },
     // table time
     tableDatas: {
@@ -266,9 +232,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: '700',
 
         '& span': {
-
             borderBottom: '2px solid white',
-
             padding: '0 0.8rem'
         },
     },
@@ -279,15 +243,12 @@ const useStyles = makeStyles((theme) => ({
     tableData1: {
         color: '#3d3795',
         fontWeight: '500',
-
     },
     tableData2: {
         color: '#3d3795',
         fontWeight: '700',
         '& span': {
-
             borderBottom: '2px solid #3d3795',
-
             padding: '0 0.8rem'
         }
     },
@@ -304,9 +265,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '1rem',
         [theme.breakpoints.down('1076')]: {
             width: '100%'
-
         }
-
     },
     tabletime2: {
         width: '100%',
@@ -314,22 +273,16 @@ const useStyles = makeStyles((theme) => ({
     },
     tabletime3: {
         width: '100%',
-
-
     },
-
-
     centerG: {
         textAlign: 'center',
         color: '#c08dbc',
         marginRight: '142px',
     },
-
     // Border grid start
     gridProgramP1: {
         marginLeft: '0rem',
     },
-
     gridSpaceBtn1: {
         height: '1rem',
         marginTop: '1rem',
@@ -337,8 +290,6 @@ const useStyles = makeStyles((theme) => ({
         alignItem: 'center',
         display: 'flex',
         marginBottom: '1rem',
-
-
     },
     gridSpaceBtn2: {
         height: '1rem',
@@ -353,7 +304,6 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         alignItem: 'center',
         display: 'flex',
-
     },
     gridSpaceBtn4: {
         height: '1rem',
@@ -369,7 +319,6 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         alignItem: 'center',
         display: 'flex',
-
     },
     gridProgram: {
         borderLeft: '2px solid #3d3795',
@@ -382,13 +331,11 @@ const useStyles = makeStyles((theme) => ({
     gridSpanSet: {
         background: '#c1c0d4',
         borderRadius: '13px',
-
         padding: '3px 50px 3px 10px',
     },
     gridSpanSet1: {
         background: '#c1c0d4',
         borderRadius: '13px',
-
         padding: '3px 10px'
     },
     imggg: {
@@ -408,7 +355,6 @@ const useStyles = makeStyles((theme) => ({
     tableFW: {
         [theme.breakpoints.down('1076')]: {
             width: '100%',
-
         }
     },
     line: {
@@ -423,6 +369,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 const OrganizationStellar = () => {
+    const { t } = useTranslation()
     const classes = useStyles();
     return (
         <>
@@ -431,40 +378,36 @@ const OrganizationStellar = () => {
                     <Grid container md={12}>
                         <Grid className={classes.tableFW} >
                             <Typography>
-                                <h3 className={classes.oreganizationH3}>MENTORING STELLAR 2020</h3>
+                                <h3 className={classes.oreganizationH3}>{t('common:MENTORINGSTELLAR', "   MENTORING STELLAR 2020")}</h3>
 
                             </Typography>
                             <Grid md={12}>
-                                <InputLabel variant='h6' fullwidth className={classes.oreganizationH6}>  Organization name</InputLabel> </Grid>
+                                <InputLabel variant='h6' fullwidth className={classes.oreganizationH6}>{t('common: Organizationname', "   Organization name")} </InputLabel> </Grid>
                             <Typography>
-                                <p className={classes.organizationP}><span className={classes.spanP}>President</span> at <span className={classes.spanForColor}>Society name</span></p>
-                                <p className={classes.orgPara}>Starts January 1,2020, ends February 18,2020</p>
+                                <p className={classes.organizationP}><span className={classes.spanP}>{t('common:President', "   President")}</span>{t('common:at', " at")}  <span className={classes.spanForColor}>{t('common:Society', "Society name")}</span></p>
+                                <p className={classes.orgPara}>{t('common:Startsends', "Starts January 1,2020, ends February 18,2020")}</p>
                             </Typography>
                             <Grid md={12}>
                                 <img className={classes.flag} src="https://itdevelopmentservices.com/fortunadata/wp-content/uploads/2022/06/us-f.png" width='24px' height='20px' />
                                 <img className={classes.flag1} src=" https://itdevelopmentservices.com/fortunadata/wp-content/uploads/2022/06/gfg.png" width='24px' height='20px' />
                             </Grid>
-                            <Typography color="red">
-                                <p className={classes.descriptionPara}><span className={classes.description}>Short Description:</span><br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad neque at illum, possimus architecto officia. Tempora voluptatum laudantium, aliquam illum in voluptates, vero veritatis aliquid atque aspern</p>
+                            <Typography >
+                                <p className={classes.descriptionPara}><span className={classes.description}>{t('common:ShortDescription', " Short Description:")}</span><br />{t('common:ShortDescOraganizastion', "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad neque at illum, possimus architecto officia. Tempora voluptatum laudantium, aliquam illum in voluptates, vero veritatis aliquid atque aspern")}</p>
                             </Typography>
-
                         </Grid>
-
-
                     </Grid>
                 </div>
-
                 <div className={classes.headTop1}>
                     <Grid className={classes.tableTime1}>
                         <div className={classes.tabletime2}>
-                            <Grid className={classes.tableHead} md={12}>START</Grid>
-                            <Grid className={classes.tableData1} md={12}>jan</Grid>
+                            <Grid className={classes.tableHead} md={12}>{t('common:Start', "   Start")}</Grid>
+                            <Grid className={classes.tableData1} md={12}>{t('common:month', " jan")}</Grid>
                             <Grid className={classes.tableData2} md={12}><span> 01</span></Grid>
                             <Grid className={classes.tableData3} md={12}>2020</Grid>
                         </div>
                         <div className={classes.tabletime3}>
-                            <Grid className={classes.tableHead} md={12}>END</Grid>
-                            <Grid className={classes.tableData1} md={12}>feb</Grid>
+                            <Grid className={classes.tableHead} md={12}>{t('common:End', " End")}</Grid>
+                            <Grid className={classes.tableData1} md={12}>{t('common:month', " feb")}</Grid>
                             <Grid className={classes.tableData2} md={12}><span> 18</span></Grid>
                             <Grid className={classes.tableData3} md={12}>2020</Grid>
                         </div>
@@ -474,85 +417,72 @@ const OrganizationStellar = () => {
                         <StarOutlinedIcon className={classes.starOrg} />
                         <StarOutlinedIcon className={classes.starOrg} />
                         <StarOutlinedIcon className={classes.starOrg} />
-
                     </Grid>
-
                     <Typography >
-                        <p className={classes.paragraphOrg}>Mentors Name: <span className={classes.paragraphOrg1}>Liselotte Beer</span> (59%)</p>
-                        <p className={classes.paragraphOrg2}>Program affisate:</p>
+                        <p className={classes.paragraphOrg}>{t('common:MentorsName', " Mentors Name:")}  <span className={classes.paragraphOrg1}>{t('common:Liselotte', " Liselotte Beer")} </span> (59%)</p>
+                        <p className={classes.paragraphOrg2}>{t('common:affisate', " Program affisate:")} </p>
 
-                        <p className={classes.paragraphOrg3}>Mentoring Stellar 2020</p>
-                        <p className={classes.paragraphOrg3}>Mentoring Stellar 2020 quarter</p>
+                        <p className={classes.paragraphOrg3}>{t('common:MENTORINGSTELLAR', " Mentoring Stellar 2020")} </p>
+                        <p className={classes.paragraphOrg3}>{t('common:quarter', " Mentoring Stellar 2020 quarter")} </p>
                     </Typography>
                 </div>
             </div>
             < div className={classes.flexIcon}>
                 <Grid md={12} className={classes.flexIconOrg}>
-                    <Grid className={classes.iconPar}><img className={classes.imggg} src="https://itdevelopmentservices.com/fortunadata/wp-content/uploads/2022/06/down-arrow2.png" />12Jan</Grid>
-                    <Grid className={classes.iconPar}><img className={classes.imggg1} src="https://itdevelopmentservices.com/fortunadata/wp-content/uploads/2022/06/down-arrow2.png" />28Jan</Grid>
-                    <Grid className={classes.iconPar}><img className={classes.imggg1} src="https://itdevelopmentservices.com/fortunadata/wp-content/uploads/2022/06/down-arrow2.png" />10Feb</Grid>
+                    <Grid className={classes.iconPar}><img className={classes.imggg} src="https://itdevelopmentservices.com/fortunadata/wp-content/uploads/2022/06/down-arrow2.png" />12{t('common:Date', " Jan")} </Grid>
+                    <Grid className={classes.iconPar}><img className={classes.imggg1} src="https://itdevelopmentservices.com/fortunadata/wp-content/uploads/2022/06/down-arrow2.png" />28{t('common:Date', " Jan")}</Grid>
+                    <Grid className={classes.iconPar}><img className={classes.imggg1} src="https://itdevelopmentservices.com/fortunadata/wp-content/uploads/2022/06/down-arrow2.png" />10 {t('common:Date', " Feb")}</Grid>
                 </Grid>
             </div>
-
             <div className={classes.gridOrg1}>
                 <Grid md={1} className={classes.gridOrg2}>
-                    <Grid>jan</Grid>
+                    <Grid>{t('common:Date', " jan")} </Grid>
                     <Grid className={classes.tableDatas}><span> 01</span></Grid>
                     <Grid>2020</Grid>
-
                 </Grid>
-
                 <Grid md={4} className={classes.gridOrg3}> <div className={classes.line1}></div></Grid>
-
                 <Grid md={3} className={classes.gridOrg4}></Grid>
                 <Grid md={2} className={classes.gridOrg5}><div className={classes.line}></div></Grid>
                 <Grid md={1} className={classes.gridOrg6}></Grid>
 
                 <Grid md={1} className={classes.gridOrg2}>
-                    <Grid>feb</Grid>
+                    <Grid>{t('common:Date', " feb")} </Grid>
                     <Grid className={classes.tableDatas}><span> 18</span></Grid>
                     <Grid>2020</Grid>
                 </Grid>
             </div>
-            <Grid md={12} className={classes.centerG}>22 jan</Grid>
+            <Grid md={12} className={classes.centerG}>22 {t('common:Date', " jan")} </Grid>
             <div className={classes.gridSpaceBtn}>
                 <Grid className={classes.gridSpaceBtn1} >
                     <Grid md={2} sm={0}></Grid>
                     <Grid className={classes.gridProgram} md={10} sm={12}>
-                        <p className={classes.gridProgramP}> 01 Jan <span className={classes.gridSpanSet}>Program Setup</span> </p></Grid>
+                        <p className={classes.gridProgramP}> 01 {t('common:Date', " jan")}  <span className={classes.gridSpanSet}>{t('common:  Setup', "  Program Setup")}</span> </p></Grid>
                     <Grid md={5} sm={0}></Grid>
                 </Grid>
-
-
                 <Grid className={classes.gridSpaceBtn2} >
                     <Grid md={5} sm={0}></Grid>
                     <Grid className={classes.gridProgram} md={7} sm={12}>
-                        <p className={classes.gridProgramP}> 19 Jan <span className={classes.gridSpanSet1}>Mentor data collection</span> </p></Grid>
+                        <p className={classes.gridProgramP}> 19 {t('common:Date', " jan")}  <span className={classes.gridSpanSet1}>{t('common:collection', "  Mentor data collection")}</span> </p></Grid>
                     <Grid md={2} sm={0}></Grid>
                 </Grid>
                 <Grid className={classes.gridSpaceBtn3} >
                     <Grid md={6} sm={0}></Grid>
                     <Grid className={classes.gridProgram} md={6} sm={12}>
-                        <p className={classes.gridProgramP}> 01 Feb <span className={classes.gridSpanSet1}>Mentor data collection</span> </p></Grid>
-
+                        <p className={classes.gridProgramP}> 01 {t('common:Date', " Feb")}  <span className={classes.gridSpanSet1}>{t('collection:at', "  Mentor data collection")}</span> </p></Grid>
                 </Grid>
-
                 <Grid className={classes.gridSpaceBtn4} >
                     <Grid md={7} sm={0}></Grid>
                     <Grid className={classes.gridProgram} md={5} sm={12}>
-                        <p className={classes.gridProgramP}> 13 Feb <span className={classes.gridSpanSet}>Kickoff webinar</span> </p></Grid>
-
+                        <p className={classes.gridProgramP}> 13 {t('common:Date', " Feb")}  <span className={classes.gridSpanSet}>{t('common:Kickoff', " Kickoff webinar")} </span> </p></Grid>
                 </Grid>
-
                 <Grid className={classes.gridSpaceBtn5} >
                     <Grid md={8} sm={0}></Grid>
                     <Grid className={classes.gridProgram} md={4} sm={12}>
-                        <p className={classes.gridProgramP1}> 14 Feb <span className={classes.gridSpanSet}>Reporting</span> </p></Grid>
-
+                        <p className={classes.gridProgramP1}> 14 {t('common:Date', " Feb")}  <span className={classes.gridSpanSet}>{t('common:Reporting', " Reporting")} </span> </p></Grid>
                 </Grid>
             </div>
+            <hr />
         </>
     )
 }
-
 export default OrganizationStellar
